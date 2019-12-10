@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
+import Link from 'next/link';
 
 
 
@@ -10,6 +11,9 @@ const Home = () => (
       <title>White Water, Is It In?</title>
       {/* <link rel="icon" href="/favicon.ico" /> */}
     </Head>
+        <Link href="/about">
+            <a>About Page</a>
+        </Link>
 
     <Nav />
 
@@ -17,8 +21,10 @@ const Home = () => (
       <h1 className="title">White Water, Is It In?</h1>
       <p className="description">
         Wellcome to the PNW White water application build to provide you with up to date information on all the great rivers around. You can search a river and find out what the current flow, class, length of the run and gps corrdinates of the put in and take out's of the river. What are you waiting for? get out there, be safe and get wild! 
-      </p>
-
+      </p> <Link href="/map">
+                <a>Search for a river</a>
+            </Link>
+ 
       <div className="row">
         <a href="https://nextjs.org/docs" className="card">
           <h3>Search a River &rarr;</h3>
