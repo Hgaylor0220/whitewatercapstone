@@ -1,8 +1,12 @@
+import Layout from '../components/Layout';
+
 export default function Map() {
     return (
+        <Layout>
         <div>
             <p>This is where the map will be</p>
         </div>
+        </Layout>
     );
 }
 

@@ -17,7 +17,7 @@ const Nav = () => (
           <a>Home</a>
         </Link></li>
         <li>
-        <Link href="/Search">
+        <Link href="/map">
          <a>Search a River</a>
         </Link></li>
         <li>
