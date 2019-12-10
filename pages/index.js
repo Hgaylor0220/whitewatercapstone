@@ -5,13 +5,11 @@ import Layout from '../components/Layout';
 
 
 
-const Home = () => (
-    
-  <Layout>
+const indexPageContent =  
   <div>
     <Head>
       <title>White Water, Is It In?</title>
-      {/* <link rel="icon" href="/favicon.ico" /> */}
+    
     </Head>
 
     <div className="hero">
@@ -86,7 +84,8 @@ const Home = () => (
       }
     `}</style>
   </div>
-</Layout> 
-)
 
-export default Home
+
+export default function Index() {
+    return <Layout content={indexPageContent} />;
+}

@@ -1,11 +1,9 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout.js';
+
+
+
+const journal = <p>Journal Page</p>;
 
 export default function Journal() {
-    return (
-        <Layout >
-        <div>
-            <p>This is where the Journal will be</p>
-        </div>
-        </Layout >
-    );
+    return <Layout content={journal} />;
 }

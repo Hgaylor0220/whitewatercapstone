@@ -1,17 +1,11 @@
 import Layout from '../components/Layout';
 
+
+const map = <p>Map Page</p>;
+
 export default function Map() {
-    return (
-        <Layout>
-        <div>
-            <p>This is where the map will be</p>
-        </div>
-        </Layout>
-    );
+    return <Layout content={map} />;
 }
-
-
-
 
 
 

@@ -1,11 +1,9 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout.js';
 
-export default function Inviteafriend() {
-    return (
-        <Layout>
-        <div>
-            <p>This is where the Inviteafriend will be</p>
-        </div>
-        </Layout>
-    );
+
+
+const inviteafriend = <p>Invite A Friend Page</p>;
+
+export default function InviteAFriend() {
+    return <Layout content={inviteafriend} />;
 }

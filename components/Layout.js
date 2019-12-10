@@ -9,7 +9,7 @@ const layoutStyle = {
 const Layout = props => (
     <div style={layoutStyle}>
         <Nav />
-        {props.children}
+        {props.content}
     </div>
 );
 
