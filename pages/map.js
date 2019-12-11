@@ -1,7 +1,38 @@
 import Layout from '../components/Layout';
+// import Link from 'next/link';
+// import fetch from 'isomorphic-unfetch';
+
+// const Gmap = props => (
+//     <Layout>
+//         <h1>Google map</h1>
+//         <ul>
+//             {props.rivers.map(river => (
+//                 <li key={river.id}>
+//                     <Link href="/p/[id]" as={`/p/${river.id}`}>
+//                         <a>{river.name}</a>
+//                     </Link>
+//                 </li>
+//             ))}
+//         </ul>
+//     </Layout>
+// );
+
+// Gmap.getInitialProps = async function () {
+//     const API_KEY = process.env.GMAPS_API_KEY;
+//     const res = await fetch(`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`);
+//     const data = await res.json();
+
+//     console.log(`Show data fetched. Count: ${data.length}`);
+
+//     return {
+//         rivers: data.map(entry => entry.river)
+//     };
+// };
+
+// export default Gmap;
 
 
-const map = <p>Map Page</p>;
+const map = <p>map Page</p>;
 
 export default function Map() {
     return <Layout content={map} />;
