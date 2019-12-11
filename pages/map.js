@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import Map from '../components/Map'
 // import Link from 'next/link';
 // import fetch from 'isomorphic-unfetch';
 
@@ -32,9 +33,9 @@ import Layout from '../components/Layout';
 // export default Gmap;
 
 
-const map = <p>map Page</p>;
+const map = {Map};
 
-export default function Map() {
+export default function GoogleMap() {
     return <Layout content={map} />;
 }
 
