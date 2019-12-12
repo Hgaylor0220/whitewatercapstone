@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import GoogleMap from '../components/GoogleMap';
+
 
 
 
@@ -19,7 +19,7 @@ const indexPageContent =
       <p className="description">
         Wellcome to the PNW White water application build to provide you with up to date information on all the great rivers around. You can search a river and find out what the current flow, class, length of the run and gps corrdinates of the put in and take out's of the river. What are you waiting for? get out there, be safe and get wild! 
       </p> 
-      <GoogleMap/>
+      
  
       <div className="row">
             <a href="/RiverInfo" className="card">
@@ -30,7 +30,7 @@ const indexPageContent =
           <h3>Create a river Journal &rarr;</h3>
           <p>Document all your favorite runs here! Notes on flow, river changes, seasonal trends?</p>
         </a>
-        <a href="/viewRiver" className="card">
+        <a href="/map" className="card">
             <h3>View a River &rarr;</h3>
             <p>Looking for a river near you?</p>
         </a>

@@ -40,3 +40,30 @@ Start seeding data on rivers with ethan
     Tuesday- Work on live updates with adding a river and messages displaying on the river page.
 
     Wednesday- Final UI and ReadME touch ups. Beautify or work on any bugs. 
+
+
+    _____________________________________________________________________________________
+                                         Notes
+    Pulling river information every 2 hrs from 6am to 6pm = 6 pulls per river. Retrun only most popular rivers in OR WA.        
+
+    Need to return information on a river searched.
+
+    Need to create a loggin feature for user. 
+
+    Need to create and be able to save a journal entry
+
+    need to be able to incorporate google maps with aps to search rivers
+
+
+    washington state river flow info  https://waterdata.usgs.gov/wa/nwis/current/?type=flow
+
+        -Station Name 
+        -Date and time
+        -Gage height,feet
+        -Dis-charge,ft3/s
+
+    Oregon state river flow info https://waterdata.usgs.gov/or/nwis/current/?type=flow
+        -Station Name 
+        -Date and time
+        -Gage height,feet
+        -Dis-charge,ft3/s
