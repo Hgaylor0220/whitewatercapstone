@@ -25,9 +25,9 @@ class MyFancyComponent extends React.PureComponent {
         isMarkerShown: false,
     }
 
-    componentDidMount() {
-        this.delayedShowMarker()
-    }
+    // componentDidMount() {
+    //     this.delayedShowMarker()
+    // }
 
     delayedShowMarker = () => {
         setTimeout(() => {

@@ -18,7 +18,7 @@ const indexPageContent =
       <p className="description">
         Wellcome to the PNW White water application build to provide you with up to date information on all the great rivers around. You can search a river and find out what the current flow, class, length of the run and gps corrdinates of the put in and take out's of the river. What are you waiting for? get out there, be safe and get wild! 
       </p> 
-      <GoogleMap/>
+      {/* <GoogleMap/> */}
  
       <div className="row">
         <a href="/GoogleMap" className="card">
