@@ -1,48 +1,58 @@
-class MapContainer extends Component {
+import React from "react";
+import { compose, withProps } from "recompose";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
-    analyzeRegion = (position, radius) => people => {
-        const { onRegionFiltered = f => f } = this.props;
-        const withinRegion = this.withinRegion(position, radius);
+const MyMapComponent = compose(
+    withProps({
+        googleMapURL: "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=IzaSyCsGSZApvtm21DeBQgMJM4-6uyTKYszwaM",
+        loadingElement: <div style={{ height: `100%` }} />,
+        containerElement: <div style={{ height: `400px` }} />,
+        mapElement: <div style={{ height: `100%` }} />,
+    }),
+    withScriptjs,
+    withGoogleMap
+)((props) =>
+    <GoogleMap
+        defaultZoom={8}
+        defaultCenter={{ lat: 45.631062, lng: -122.671570 }}
+    >
+        {props.isMarkerShown && <Marker position={{ lat: 45.631062, lng: -122.6715704 }} onClick={props.onMarkerClick} />}
+    </GoogleMap>
+)
 
-        const mappedPeople = people.map(person => {
-            const { position } = person || {};
-            const within = withinRegion(position);
-            return { ...person, within };
-        });
-
-        onRegionFiltered(mappedPeople);
+class MyFancyComponent extends React.PureComponent {
+    state = {
+        isMarkerShown: false,
     }
 
     componentDidMount() {
+        this.delayedShowMarker()
+    }
+    
 
-        const { person: { id, position }, radius, people = [], channel = null } = this.props;
-        const mapContext = this.map.context['__SECRET_MAP_DO_NOT_USE_OR_YOU_WILL_BE_FIRED'];
-        const setMapCenter = mapContext.setCenter.bind(mapContext);
+    delayedShowMarker = () => {
+        setTimeout(() => {
+            this.setState({ isMarkerShown: true })
+        }, 3000)
+    }
 
-        let { lat, lng } = position;
-
-        channel && channel.bind('transit', ({ person = {}, people }) => {
-            const { id: $id, position: $position } = person;
-            const isUser = id === $id;
-            const center = isUser ? $position : position;
-
-            isUser && setMapCenter(center);
-            this.analyzeRegion(center, radius)(people);
-        });
-
-        this.positionUpdate = setInterval(() => {
-            lat = lat + Math.random() * 0.001;
-            lng = lng + Math.random() * 0.001;
-
-            axios.post(`/transit/${id}`, { lat, lng });
-        }, 10000);
-
-        this.analyzeRegion(position, radius)(people);
-
+    handleMarkerClick = () => {
+        this.setState({ isMarkerShown: false })
+        this.delayedShowMarker()
     }
 
     componentWillUnmount() {
-        clearInterval(this.positionUpdate);
+        clearInterval(this.delayedShowMarker);
     }
 
-};
+
+    render() {
+        return (
+            <MyMapComponent
+                isMarkerShown={this.state.isMarkerShown}
+                onMarkerClick={this.handleMarkerClick}
+            />
+        )
+    }
+}
+export default MyFancyComponent;

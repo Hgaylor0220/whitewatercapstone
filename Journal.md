@@ -3,6 +3,12 @@ Colors used for the wireframing ap
     color for concideration: #AA4DA3;
     font style: Lucida Grande
 
+    Resources:
+    - https://waterdata.usgs.gov/nwis/uv?agency_code=USGS&site_no=14220500
+
+    Information for scrapping -
+    -https://help.waterdata.usgs.gov/faq/automated-retrievals#RT
+
 12/6 
     started working on file structor first thing. Then worked on Wireframing from 9:30-11am (docs apt from 11:30-12:30 ish) Finished the bases of wire framing, diagram and ReadMe till 6pm (Completely forget to submit project on time =( )
     worked on addition file structor and researching API in Node.js and building scrapper in Node.JS over the weekend. 

@@ -12,22 +12,27 @@ const indexPageContent =
       <title>White Water, Is It In?</title>
     
     </Head>
+ 
 
     <div className="hero">
       <h1 className="title">White Water, Is It In?</h1>
       <p className="description">
         Wellcome to the PNW White water application build to provide you with up to date information on all the great rivers around. You can search a river and find out what the current flow, class, length of the run and gps corrdinates of the put in and take out's of the river. What are you waiting for? get out there, be safe and get wild! 
       </p> 
-      {/* <GoogleMap/> */}
+      <GoogleMap/>
  
       <div className="row">
-        <a href="/GoogleMap" className="card">
+            <a href="/RiverInfo" className="card">
           <h3>Search a River &rarr;</h3>
           <p>Search by location, class or length</p>
         </a>
         <a href="/journal" className="card">
           <h3>Create a river Journal &rarr;</h3>
           <p>Document all your favorite runs here! Notes on flow, river changes, seasonal trends?</p>
+        </a>
+        <a href="/viewRiver" className="card">
+            <h3>View a River &rarr;</h3>
+            <p>Looking for a river near you?</p>
         </a>
         <a
           href="/inviteafriend"
