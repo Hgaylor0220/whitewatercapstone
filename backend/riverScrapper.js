@@ -13,8 +13,8 @@ axios(url)
         alldata.each(function(){
             const riverName = $(this).find('&nbsp > td').text();
             const dateTime = $(this).find('PST > td').text();
-            const riverName = $(this).find('&nbsp > td').text();
-            const riverName = $(this).find('&nbsp > td').text();
+            const gageHeight = $(this).find('ft > td').text();
+            const discharge = $(this).find('cfs > td').text();
 
 
         })
