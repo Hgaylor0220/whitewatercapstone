@@ -54,7 +54,7 @@ Start seeding data on rivers with ethan
 
     need to be able to incorporate google maps with aps to search rivers
 
-
+    scrapper how to website https://pusher.com/tutorials/web-scraper-node
     washington state river flow info  https://waterdata.usgs.gov/wa/nwis/current/?type=flow
 
         -Station Name 

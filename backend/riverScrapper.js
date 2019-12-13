@@ -1,23 +1,68 @@
+//SCRAP INFORMATION VIA STATIC SITE WAY
+
+// Is it possible to create a dictionary to assign the station numbers to rivers?
+
+// pl-scraper.js
 
 const axios = require('axios');
+const cheerio = require('cheerio');
 
-const url = 'https://waterdata.usgs.gov/wa/nwis/current/?type=flow';
+const url = 'https://waterdata.usgs.gov/or/nwis/current/?type=flow&group_key=county_cd';
 
 axios(url)
     .then(response => {
         const html = response.data;
-        const $ =cheerio.load(html);
-        const alldata = $('tr');
-        const riverInfo = [];
+        const $ = cheerio.load(html)
+        const statsTable = $('.statsTableContainer > tr');
+        const topPremierLeagueScorers = [];
 
-        alldata.each(function(){
-            const riverName = $(this).find('&nbsp > td').text();
-            const dateTime = $(this).find('PST > td').text();
-            const gageHeight = $(this).find('ft > td').text();
-            const discharge = $(this).find('cfs > td').text();
+        statsTable.each(function () {
+            const rank = $(this).find('.rank > strong').text();
+            const playerName = $(this).find('.playerName > strong').text();
+            const nationality = $(this).find('.playerCountry').text();
+            const goals = $(this).find('.mainStat').text();
 
+            topPremierLeagueScorers.push({
+                rank,
+                name: playerName,
+                nationality,
+                goals,
+            });
+        });
 
-        })
-        console.log(alldata.length);
+        console.log(topPremierLeagueScorers);
     })
     .catch(console.error);
+
+
+// TRYING TO SCRAP INFO ASSUMING DYNAMIC SITE -- was only able to return array. Not sure if I am targeting the right search querey.
+
+// const cheerio = require('cheerio');
+// const puppeteer = require('puppeteer');
+
+// const url = 'https://waterdata.usgs.gov/wa/nwis/current/?type=flow';
+
+// puppeteer
+//     .launch()
+//     .then(browser => browser.newPage())
+//     .then(page => {
+//         return page.goto(url).then(function () {
+//             return page.content();
+//         });
+//     })
+//     .then(html => {
+//         const $ = cheerio.load(html);
+//         const riverSearch = [];
+//         $('a[href="/wa/nwis/uv/?site_no=14128895-143462600&amp;PARAmeter_cd=00060,00065"] > td').each(function () {
+//             riverSearch.push({
+//                 title: $(this).text(),
+//             });
+//         });
+
+//         console.log(riverSearch);
+//     })
+//     .catch(console.error);
+
+
+
+        
