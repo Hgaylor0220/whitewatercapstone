@@ -8,6 +8,10 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 const url = 'https://waterdata.usgs.gov/or/nwis/current/?type=flow&group_key=county_cd';
+//set up a dictionary for the river names and station number
+// per the users choice, search the river name on the first url site then return that to the scrapper and replace .
+
+
 
 axios(url)
     .then(response => {

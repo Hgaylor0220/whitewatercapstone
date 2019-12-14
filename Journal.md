@@ -67,3 +67,10 @@ Start seeding data on rivers with ethan
         -Date and time
         -Gage height,feet
         -Dis-charge,ft3/s
+
+
+    You can build a scrapper that will take the users river choice and ruturn that station id back to the href the scrapper will search for then scrap that site...
+    ie; 
+    const usersRiverSelection = props.userRiverSelection;
+    const url = 'https://waterdata.usgs.gov/or/nwis/uv/?site_no=${usersRiverSelection}PARAmeter_cd=00065,00060';
+
