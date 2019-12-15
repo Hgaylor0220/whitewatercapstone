@@ -54,6 +54,9 @@ Start seeding data on rivers with ethan
 
     need to be able to incorporate google maps with aps to search rivers
 
+https://waterdata.usgs.gov/or/nwis/current/?type=flow&group_key=county_cd
+    
+
     scrapper how to website https://pusher.com/tutorials/web-scraper-node
     washington state river flow info  https://waterdata.usgs.gov/wa/nwis/current/?type=flow
 
@@ -74,3 +77,128 @@ Start seeding data on rivers with ethan
     const usersRiverSelection = props.userRiverSelection;
     const url = 'https://waterdata.usgs.gov/or/nwis/uv/?site_no=${usersRiverSelection}PARAmeter_cd=00065,00060';
 
+
+
+Top 5 rivers for OR
+*Clackamas upper
+
+**put in's (Carnage)
+ - Powerhouse
+ - Hole in the wall
+ - Fish creek
+ - Toilet bowl
+ ** Take Out's
+ - Toilet Bowl
+ - Moore Creek
+ - Memoloose
+ (Confidence  would be toilet bowl-memoloose)
+ *Clackamas Lower
+ **put in's ()
+ - Mciver(upper)
+ - Mciver(lower)
+ - Feldheimer
+ - Barton
+ - Carver
+
+ ** Take Out's
+ - Mciver(lower)park
+ - Feldheimer
+ - Barton park
+ - Carver park
+ - Clackamette park
+
+ *North Santiam
+
+ ** Put in's
+ - Big Cliff Dam
+ - Pack Saddle
+ - Mill City
+ - Mehama
+
+ ** Take Out's
+ - Pack Saddle
+ - Mill City
+ - Mehama
+ - Stayton
+
+ * Mackenzie(Eugene)
+
+ ** Put in's
+ - Big Cliff Dam
+ - Pack Saddle
+ - Mill City
+ - Mehama
+
+ ** Take Out's
+ - Pack Saddle
+ - Mill City
+ - Mehama
+ - Stayton
+
+ * Deshutes
+
+ ** Put in's
+ - Big Cliff Dam
+ - Pack Saddle
+ - Mill City
+ - Mehama
+
+ ** Take Out's
+ - Pack Saddle
+ - Mill City
+ - Mehama
+ - Stayton
+
+ * John Day
+
+ ** Put in's
+ - Big Cliff Dam
+ - Pack Saddle
+ - Mill City
+ - Mehama
+
+ ** Take Out's
+ - Pack Saddle
+ - Mill City
+ - Mehama
+ - Stayton
+ 
+ * Rouge River
+
+ ** Put in's
+ - Big Cliff Dam
+ - Pack Saddle
+ - Mill City
+ - Mehama
+
+ ** Take Out's
+ - Pack Saddle
+ - Mill City
+ - Mehama
+ - Stayton
+ 
+ * Sandy
+
+ ** Put in's
+ - Big Cliff Dam
+ - Pack Saddle
+ - Mill City
+ - Mehama
+
+ ** Take Out's
+ - Pack Saddle
+ - Mill City
+ - Mehama
+ - Stayton
+ 
+
+
+Top 5 rivers for WA
+* White Salmon
+* Wind
+* Canyon Creek
+* Washougal
+* Clikatack
+* East Fork of the Lewis
+* Ohanapecosh (ohani)
+* Upper Lewis (waterfall)
