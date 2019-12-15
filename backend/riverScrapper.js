@@ -7,7 +7,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const url = 'https://waterdata.usgs.gov/or/nwis/current/?type=flow&group_key=county_cd';
+const url = 'https://waterdata.usgs.gov/or/nwis/uv/?site_no=14142500&PARAmeter_cd=00065,00060';
 //set up a dictionary for the river names and station number
 // per the users choice, search the river name on the first url site then return that to the scrapper and replace .
 
@@ -17,20 +17,20 @@ axios(url)
     .then(response => {
         const html = response.data;
         const $ = cheerio.load(html)
-        const statsTable = $('.statsTableContainer > tr');
-        const topPremierLeagueScorers = [];
+        const riverContainerSearch = $('.statsTableContainer > td');
+        const riverSearch = [];
 
-        statsTable.each(function () {
-            const rank = $(this).find('.rank > strong').text();
-            const playerName = $(this).find('.playerName > strong').text();
-            const nationality = $(this).find('.playerCountry').text();
-            const goals = $(this).find('.mainStat').text();
+        riverContainerSearch.each(function () {
+            const riverName = $(this).find('body > h2').text();
+            const dateTime = $(this).find('.stationContainer > text').text();
+            const gageCfs = $(this).find('.highlight2').text();
+            const gageFt = $(this).find('.stationContainer').text();
 
-            topPremierLeagueScorers.push({
-                rank,
-                name: playerName,
-                nationality,
-                goals,
+            riverSearch.push({
+                riverName: riverName,
+                dateTime: dateTime,
+                gageCfs: gageCfs,
+                gageFt: gageFt
             });
         });
 
