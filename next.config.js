@@ -1,9 +1,17 @@
 const webpack = require('webpack');
 require('dotenv').config();
 
+const withImages = require('next-images')
+module.exports = withImages({
+    webpack(config, options) {
+        return config
+    }
+})
+
 module.exports = {
     devIndicators: {
         autoPrerender: false,
+        
     },
 
     webpack: config => {

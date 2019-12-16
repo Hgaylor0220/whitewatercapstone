@@ -1,15 +1,16 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link';
+
 import Layout from '../components/Layout';
 
 
 const indexPageContent =  
   <div>
+      <body>
     <Head>
       <title>White Water, Is It In?</title>
     </Head>
- 
         <div className="hero"   >
       <h1 className="title">White Water, Is It In?</h1>
       <p className="description">
@@ -36,11 +37,14 @@ const indexPageContent =
         </a>
       </div>
     </div>
+ 
+     {/* <img src={IndexPic} />  */}
+    
   
     <style jsx>{`
       .hero {
         width: 100%;
-        color: ##556E53;
+        color: #E5DFDF;
         fontfamily: Lucida-Grande;
       }
       .title {
@@ -70,20 +74,21 @@ const indexPageContent =
         border: 1px solid #9b9b9b;
       }
       .card:hover {
-        border-color: ##556E53;
+        border-color: #E5DFDF;
       }
       .card h3 {
         margin: 0;
-        color: ##556E53;
+        color: #E5DFDF;
         font-size: 18px;
       }
       .card p {
         margin: 0;
         padding: 12px 0 0;
         font-size: 13px;
-        color: ##556E53;
+        color: #E5DFDF;
       }
     `}</style>
+    </body>
   </div>
 
 
