@@ -1,17 +1,16 @@
 
 import Layout from '../components/Layout';
-import GoogleMap from '../components/GoogleMap';
 
 
 
-
-const gmap = <div id="root"></div>;
+const gmap = <div > THIS IS WILL BE GOOGLE MAP OF THE SELECTED RIVER</div>;
 
 export default function Gmap() {
     return <Layout content={gmap} />;
 }
 
 
+// NEXT JS API EXAMPLE 
 
 // import Link from 'next/link';
 // import fetch from 'isomorphic-unfetch';

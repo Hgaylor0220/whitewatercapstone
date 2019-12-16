@@ -1,3 +1,5 @@
+// This will be the api for journal post
+
 export default (req, res) => {
     res.setHeader('Content-Type', 'application/json')
     res.statusCode = 200
