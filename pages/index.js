@@ -30,8 +30,8 @@ const indexPageContent =
           <h3>Create a river Journal &rarr;</h3>
           <p>Document all your favorite runs here! Notes on flow, river changes, seasonal trends?</p>
         </a>
-        <a href="/map" className="card">
-            <h3>View a River &rarr;</h3>
+        <a href="/messageBoard" className="card">
+            <h3>Message Board &rarr;</h3>
             <p>Looking for a river near you?</p>
         </a>
         <a
