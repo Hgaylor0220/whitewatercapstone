@@ -1,24 +1,19 @@
 //SCRAP INFORMATION VIA STATIC SITE WAY
 
 // Is it possible to create a dictionary to assign the station numbers to rivers?
-// pl-scraper.js
-// pl-scraper.js
 
-const axios = require('axios');
-const cheerio = require('cheerio');
+const rp = require('request-promise');
+const url = 'https://waterdata.usgs.gov/wa/nwis/current/?type=flow';
 
-const url = 'https://waterdata.usgs.gov/or/nwis/uv/?site_no=14142500&PARAmeter_cd=00065,00060';
-
-axios(url)
-    .then(response => {
-        const html = response.data;
-        const $ = cheerio.load(html)
-        const riverContainerSearch = $('.stationContainer > text ');
-        const riverSearch = [];
-
-        console.log(riverContainerSearch);
+rp(url)
+    .then(function (html) {
+        //success!
+        console.log($('tbody > a', html).length);
+        console.log($('tbody > a', html));
     })
-    .catch(console.error)
+    .catch(function (err) {
+        //handle error
+    });
 
 // const axios = require('axios');
 // const cheerio = require('cheerio');
