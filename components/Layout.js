@@ -17,21 +17,17 @@ import Nav from './nav';
 
 
 const bodyStyle = {
-    bodyheight: "100%",
-    background: "#d1d4c9",
-
-
+    background: "#E3D9CA",
 };
 
 
 
 const layoutStyle = {
-    margin: 20,
-    padding: 20,
+    margin: 60,
+    padding: 60,
     border: '1px solid #DDD',
-    background: "#98ccd3",
-   
-
+    background: "#556E53",
+    fontfamily:"Lucida Grande",
     
 };
 
